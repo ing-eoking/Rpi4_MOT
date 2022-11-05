@@ -1,0 +1,97 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/yckim/project/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_cb678/fast"
+/usr/bin/make -f CMakeFiles/cmTC_cb678.dir/build.make CMakeFiles/cmTC_cb678.dir/build
+make[1]: Entering directory '/home/yckim/project/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cb678.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_cb678.dir/CheckSymbolExists.c.o   -c /home/yckim/project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_cb678
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cb678.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_cb678.dir/CheckSymbolExists.c.o  -o cmTC_cb678 
+CMakeFiles/cmTC_cb678.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_cb678.dir/build.make:97: recipe for target 'cmTC_cb678' failed
+make[1]: *** [cmTC_cb678] Error 1
+make[1]: Leaving directory '/home/yckim/project/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_cb678/fast' failed
+make: *** [cmTC_cb678/fast] Error 2
+
+File /home/yckim/project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/yckim/project/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_55105/fast"
+/usr/bin/make -f CMakeFiles/cmTC_55105.dir/build.make CMakeFiles/cmTC_55105.dir/build
+make[1]: Entering directory '/home/yckim/project/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_55105.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_55105.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_55105
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_55105.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_55105.dir/CheckFunctionExists.c.o  -o cmTC_55105 -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_55105.dir/build.make:97: recipe for target 'cmTC_55105' failed
+make[1]: *** [cmTC_55105] Error 1
+make[1]: Leaving directory '/home/yckim/project/build/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_55105/fast' failed
+make: *** [cmTC_55105/fast] Error 2
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/yckim/project/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_59dd9/fast && /usr/bin/make  -f CMakeFiles/cmTC_59dd9.dir/build.make CMakeFiles/cmTC_59dd9.dir/build
+make[1]: 디렉터리 '/home/yckim/project/build/CMakeFiles/CMakeTmp' 들어감
+Building C object CMakeFiles/cmTC_59dd9.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD -o CMakeFiles/cmTC_59dd9.dir/src.c.o -c /home/yckim/project/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_59dd9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_59dd9.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD -rdynamic CMakeFiles/cmTC_59dd9.dir/src.c.o -o cmTC_59dd9 
+/usr/bin/ld: CMakeFiles/cmTC_59dd9.dir/src.c.o: in function `main':
+src.c:(.text+0x40): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x4c): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x58): undefined reference to `pthread_cancel'
+/usr/bin/ld: src.c:(.text+0x68): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_59dd9.dir/build.make:106: cmTC_59dd9] 오류 1
+make[1]: 디렉터리 '/home/yckim/project/build/CMakeFiles/CMakeTmp' 나감
+make: *** [Makefile:140: cmTC_59dd9/fast] 오류 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+

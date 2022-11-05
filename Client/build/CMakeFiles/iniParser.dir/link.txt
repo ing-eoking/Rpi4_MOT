@@ -1,0 +1,2 @@
+/usr/bin/ar qc libiniParser.a CMakeFiles/iniParser.dir/lib/iniParser.cpp.o
+/usr/bin/ranlib libiniParser.a

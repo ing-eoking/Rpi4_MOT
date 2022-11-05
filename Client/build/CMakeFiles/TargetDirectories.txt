@@ -1,0 +1,4 @@
+/home/yckim/project/build/CMakeFiles/rebuild_cache.dir
+/home/yckim/project/build/CMakeFiles/edit_cache.dir
+/home/yckim/project/build/CMakeFiles/iniParser.dir
+/home/yckim/project/build/CMakeFiles/main.dir
