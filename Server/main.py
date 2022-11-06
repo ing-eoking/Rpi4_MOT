@@ -20,7 +20,7 @@ from tools import generate_detections as gdet
 import matplotlib.pyplot as plt
 
 
-IP = "192.168.137.1"
+IP = ""
 UDP_PORT = [12345, 9931]
 MOT_PORT = 22334
 TCP_PORT = []
