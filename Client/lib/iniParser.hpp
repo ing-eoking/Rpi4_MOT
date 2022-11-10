@@ -7,8 +7,7 @@
 #include <typeinfo>
 #include <algorithm>
 
-
-
+ 
 class iniParser{
 	public:
 		iniParser(const std::string& path);
@@ -41,3 +40,4 @@ class iniParser{
 		std::map<std::string, std::string> table;
 
 };
+ 
