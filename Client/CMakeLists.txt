@@ -13,3 +13,4 @@ add_library(iniParser STATIC lib/iniParser.cpp)
 target_link_libraries(main Threads::Threads)
 target_link_libraries(main PUBLIC iniParser)
 target_link_libraries(main ${OpenCV_LIBS})
+ 
