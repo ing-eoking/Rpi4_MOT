@@ -1,1 +1,0 @@
-cmd_/home/yckim/project/module/gpio_module.ko := ld -r -EL --build-id=sha1  -T scripts/module.lds -o /home/yckim/project/module/gpio_module.ko /home/yckim/project/module/gpio_module.o /home/yckim/project/module/gpio_module.mod.o;  true
