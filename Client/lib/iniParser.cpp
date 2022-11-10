@@ -58,4 +58,3 @@ std::vector<std::string> iniParser::getStringVector(const std::string& name){
 	}
 	else throw std::invalid_argument("Not exist Name.");
 }
- 
