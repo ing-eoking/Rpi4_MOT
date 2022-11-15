@@ -377,7 +377,7 @@ int __init init_module(void){
     IRQ_GPIO27 = gpio_to_irq(27);
     request_irq(IRQ_GPIO27, det_edge, IRQF_TRIGGER_FALLING | IRQF_TRIGGER_RISING, "yckim", NULL);
     
-    pwm_frequency(19);
+    pwm_frequency(54);
     
     return 0;
 
