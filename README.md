@@ -3,6 +3,8 @@
 
 ### ※ 필요 Library : OpenCV, Cmake  
 
+### ※ 사용 언어 : C/C++  
+
 ### ※ Raspberry PI 4 구동환경에서 구현되었으며, 다른 버전에서는 구동되지 않습니다  
 (다른 버전에서는 I/O Peripheral 시작 주소 및 오실레이터 주파수 변경이 필요)  
   
