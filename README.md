@@ -18,7 +18,7 @@
 구현하였으며, 직접 설계한 1Byte 명령어에 맞추어 기기의 센서와 모터를 제어합니다.  
 모터 제어에 있어 방향 및 속도 조절을 위해 Breadboard에 H bridge 회로를 직접 구현했습니다.  
   
-![initial](https://user-images.githubusercontent.com/78298368/208564705-7265b554-ed1b-4740-b946-42404c9ceded.png)  
+<img src="https://user-images.githubusercontent.com/78298368/208564705-7265b554-ed1b-4740-b946-42404c9ceded.png"  width="480" height="320"/>
 (직접 구현한 H bridge 회로도)
 
 
