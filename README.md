@@ -21,5 +21,8 @@
 <img src="https://user-images.githubusercontent.com/78298368/208564705-7265b554-ed1b-4740-b946-42404c9ceded.png"  width="480" height="320"/>
 (직접 구현한 H bridge 회로도)
 
+사용법
 
+1. Cmake 및 OpenCV 라이브러리 설치
+2. 
 ### 전체적인 구동
