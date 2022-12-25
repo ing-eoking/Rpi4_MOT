@@ -24,5 +24,8 @@
 사용법
 
 1. Cmake 및 OpenCV 라이브러리 설치
-2. 
+2. module 폴더에서 make를 통해 커널 컴파일 및 모듈 등록
+3. build 폴더에서 cmake 및 make를 통해 컴파일
+4. build 폴더에서 main 파일 실행  
+(상위 폴더에서 ini 설정파일 수정을 통해 ip 및 port 번호 수정)
 ### 전체적인 구동
