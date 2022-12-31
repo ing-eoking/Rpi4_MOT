@@ -1,5 +1,5 @@
 # Raspberry PI 4 Multiple Object Tracking(수정중)
-## Client  
+## Client (Linux)  
 
 ### ※ 필요 Library : OpenCV, Cmake  
 
@@ -10,6 +10,7 @@
   
   
 클라이언트 프로그램에서는 크게 두가지 기능을 수행합니다.  
+  
 첫번째로 영상을 실시간으로 촬영하고, 이를 UDP 소켓을 통해 서버로 전송하는 기능입니다.  
 빠른 영상 전송을 위해 영상의 크기는 320x240 크기로 고정시켰으며, 이는 설정파일을 통해  
 사용자가 직접 변경할 수 있습니다.  
@@ -27,5 +28,16 @@
 2. module 폴더에서 make를 통해 커널 컴파일 및 모듈 등록
 3. build 폴더에서 cmake 및 make를 통해 컴파일
 4. build 폴더에서 main 파일 실행  
-(상위 폴더에서 ini 설정파일 수정을 통해 ip 및 port 번호 수정)
+(상위 폴더에서 ini 설정파일 수정을 통해 ip 및 port 번호 수정)  
+  
+  ## Server (PC - Windows 10)
+  
+  ### ※ 필요 Library : OpenCV, keyboard, tensorflow, pytorch
+  
+  ### ※ 사용 언어 : Python
+  
+  ### ※ (빠른 deepsort 구동 환경을 위해 windows용 tensorRT 설치가 필요합니다.) - 아직 구현 X
+  
+  
+  
 ### 전체적인 구동
