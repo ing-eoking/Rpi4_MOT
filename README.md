@@ -1,4 +1,4 @@
-# Raspberry PI 4 Multiple Object Tracking(수정중)
+# Raspberry PI 4 Multiple Object Tracking
 ## Client (Linux)  
 
 ### ※ 필요 Library : OpenCV, Cmake  
@@ -54,5 +54,3 @@
  1. keyboard, OpenCV, tensorflow, pytorch 설치
  2. 실행 및 클라이언트 접속 대기
  3. 완료 후 조작
-
-### 전체적인 구동
